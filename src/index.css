@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .lg\:py-40 {
+        padding-top: 1rem !important;
+        padding-bottom: 5rem !important;
+    }
+}
+
+.top-text.p-6 {
+    padding: 10.5rem !important;
+}

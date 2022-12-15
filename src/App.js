@@ -1,28 +1,22 @@
 import './App.css';
-import AlternatingImages from './components/AlternatingImages/AlternatingImages ';
-import Brand from './components/Brand/Brand';
-import BrandContactPanel from './components/BrandContactPanel/BrandContactPanel';
-import BrandedStackedLinks from './components/BrandedStackedLinks/BrandedStackedLinks';
-import Centered from './components/Centered/Centered';
-import ColumnCards from './components/ColumnCards/ColumnCards';
-import GridIcons from './components/GridIicons/GridIicons';
-import GridList from './components/GridList/GridList';
-import NavigationOverlap from './components/NavigationOverlap/NavigationOverlap';
-import SimpleCustom from './components/SimpleCustom/SimpleCustom';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Reviews from './components/Reviews/Reviews';
+import Footer from './components/Footer/Footer';
+import Blog from './components//Blog/Blog';
+import List from './components/List/List';
+import Work from './components/Work/Work';
 
 function App() {
   return (
     <div className="App">
-      <NavigationOverlap />
-      <GridList />
-      <GridIcons />
-      <AlternatingImages />
-      <Brand />
-      <BrandedStackedLinks />
-      <BrandContactPanel />
-      <Centered />
-      <SimpleCustom />
-      <ColumnCards />
+      <Header />
+      <Work />
+      <List />
+      <About />
+      <Blog />
+      <Reviews />
+      <Footer />
     </div>
   );
 }
