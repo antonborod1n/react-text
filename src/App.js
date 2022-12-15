@@ -1,21 +1,24 @@
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+//Components
 import Header from './components/Header/Header';
-import About from './components/About/About';
-import Reviews from './components/Reviews/Reviews';
 import Footer from './components/Footer/Footer';
-import Blog from './components//Blog/Blog';
-import List from './components/List/List';
-import Work from './components/Work/Work';
+//Pages
+import { Home } from './pages/Home';
+import { NotFound } from './pages/NotFound';
+import { Policy } from './pages/Policy';
+import { Popap } from './pages/Popap';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Work />
-      <List />
-      <About />
-      <Blog />
-      <Reviews />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/policy' element={<Policy />} />
+        <Route path='/popap' element={<Popap />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
       <Footer />
     </div>
   );

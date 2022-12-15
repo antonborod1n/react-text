@@ -46,7 +46,7 @@ const communicationFeatures = [
     },
 ]
 
-export default function AlternatingImages() {
+export function About() {
     return (
         <div className="overflow-hidden bg-gray-50 py-16 lg:py-24">
             <div className="relative mx-auto max-w-xl px-6 lg:max-w-7xl lg:px-8">

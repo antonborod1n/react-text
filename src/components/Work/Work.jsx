@@ -40,7 +40,7 @@ const features = [
     }, */
 ]
 
-export default function GridList() {
+export function Work() {
     return (
         <div className="bg-white">
             <div className="mx-auto max-w-7xl py-24 px-6 sm:py-32 lg:px-8 lg:py-40">

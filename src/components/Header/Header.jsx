@@ -16,6 +16,8 @@ import { Fragment } from 'react'
 import { Menu, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import { Main } from './Main'
+
 
 const user = {
     name: 'Tom Cook',
@@ -40,7 +42,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function NavigationOverlap() {
+export default function Header() {
     return (
         <>
             {/*
@@ -304,37 +306,7 @@ export default function NavigationOverlap() {
                         </>
                     )}
                 </Popover>
-                <main className="-mt-24 pb-8">
-                    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                        <h1 className="sr-only">Page title</h1>
-                        {/* Main 3 column grid */}
-                        <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8">
-                            {/* Left column */}
-                            <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-                                <section aria-labelledby="section-1-title">
-                                    <h2 className="sr-only" id="section-1-title">
-                                        Section title
-                                    </h2>
-                                    <div className="overflow-hidden rounded-lg bg-white shadow">
-                                        <div className="top-text p-6">{/* Your content */}</div>
-                                    </div>
-                                </section>
-                            </div>
-
-                            {/* Right column */}
-                            <div className="grid grid-cols-1 gap-4">
-                                <section aria-labelledby="section-2-title">
-                                    <h2 className="sr-only" id="section-2-title">
-                                        Section title
-                                    </h2>
-                                    <div className="overflow-hidden rounded-lg bg-white shadow">
-                                        <div className="top-text p-6">{/* Your content */}</div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+                <Main />
                 {/* <footer>
                     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                         <div className="border-t border-gray-200 py-8 text-center text-sm text-gray-500 sm:text-left">

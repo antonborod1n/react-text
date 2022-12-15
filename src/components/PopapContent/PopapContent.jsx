@@ -1,27 +1,4 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          'warm-gray': colors.warmGray,
-          teal: colors.teal,
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, EnvelopeIcon, PhoneIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -128,122 +105,10 @@ const footerNavigation = {
   ],
 }
 
-export default function BrandContactPanel() {
+export function PopapContent() {
   return (
     <div className="bg-white">
-      <Popover as="header" className="relative">
-        <div className="bg-warm-gray-50">
-          <nav
-            className="relative mx-auto flex max-w-7xl items-center justify-between px-6 pt-6 xl:px-8"
-            aria-label="Global"
-          >
-            <div className="flex flex-1 items-center">
-              <div className="flex w-full items-center justify-between lg:w-auto">
-                <a href="#">
-                  <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=teal&shade=500"
-                    alt=""
-                  />
-                </a>
-                <div className="-mr-2 flex items-center lg:hidden">
-                  <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-warm-gray-50 p-2 text-warm-gray-400 hover:bg-warm-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500">
-                    <span className="sr-only">Open main menu</span>
-                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-              <div className="hidden space-x-10 lg:ml-10 lg:flex">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-warm-gray-500 hover:text-warm-gray-900"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="hidden lg:flex lg:items-center lg:space-x-6">
-              <a
-                href="#"
-                className="rounded-md border border-transparent bg-warm-gray-100 py-2 px-6 text-base font-medium text-warm-gray-900 hover:bg-warm-gray-200"
-              >
-                Login
-              </a>
-            </div>
-          </nav>
-        </div>
-
-        <Transition
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Popover.Panel focus className="absolute inset-x-0 top-0 z-30 origin-top transform p-2 transition lg:hidden">
-            <div className="overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="flex items-center justify-between px-5 pt-4">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=teal&shade=500"
-                    alt=""
-                  />
-                </div>
-                <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-warm-gray-400 hover:bg-warm-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
-                    <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-              <div className="pt-5 pb-6">
-                <div className="space-y-1 px-2">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block rounded-md px-3 py-2 text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="mt-6 px-5">
-                  <a
-                    href="#"
-                    className="block w-full rounded-md border border-transparent bg-teal-500 py-2 px-4 text-center font-medium text-white shadow hover:bg-teal-600"
-                  >
-                    Login
-                  </a>
-                </div>
-              </div>
-            </div>
-          </Popover.Panel>
-        </Transition>
-      </Popover>
-
       <main className="overflow-hidden">
-        {/* Header */}
-        <div className="bg-warm-gray-50">
-          <div className="py-24 lg:py-32">
-            <div className="relative z-10 mx-auto max-w-7xl pl-4 pr-8 sm:px-6 lg:px-8">
-              <h1 className="text-4xl font-bold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">
-                Get in touch
-              </h1>
-              <p className="mt-6 max-w-3xl text-xl text-warm-gray-500">
-                Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna
-                ut volutpat. Sagittis et vel et fermentum amet consequat.
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Contact section */}
         <section className="relative bg-white" aria-labelledby="contact-heading">
@@ -379,6 +244,8 @@ export default function BrandContactPanel() {
                       </defs>
                     </svg>
                   </div>
+
+
                   <h3 className="text-lg font-medium text-white">Contact information</h3>
                   <p className="mt-6 max-w-3xl text-base text-teal-50">
                     Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
@@ -438,7 +305,7 @@ export default function BrandContactPanel() {
 
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                  <h3 className="text-lg font-medium text-warm-gray-900">Send us a message</h3>
+                  <h3 className="text-lg font-medium text-warm-gray-900">Message</h3>
                   <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                     <div>
                       <label htmlFor="first-name" className="block text-sm font-medium text-warm-gray-900">
@@ -549,121 +416,8 @@ export default function BrandContactPanel() {
             </div>
           </div>
         </section>
-
-        {/* Contact grid */}
-        <section aria-labelledby="offices-heading">
-          <div className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-            <h2 id="offices-heading" className="text-3xl font-bold tracking-tight text-warm-gray-900">
-              Our offices
-            </h2>
-            <p className="mt-6 max-w-3xl text-lg text-warm-gray-500">
-              Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus
-              dui laoreet diam sed lacus, fames.
-            </p>
-            <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {offices.map((office) => (
-                <div key={office.id}>
-                  <h3 className="text-lg font-medium text-warm-gray-900">{office.city}</h3>
-                  <p className="mt-2 text-base text-warm-gray-500">
-                    {office.address.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <br />
       </main>
-
-      <footer className="bg-warm-gray-900" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="space-y-8 xl:col-span-1">
-              <img
-                className="h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=warmGray&shade=400"
-                alt="Company name"
-              />
-              <p className="text-base text-warm-gray-400">
-                Making the world a better place through constructing elegant hierarchies.
-              </p>
-              <div className="flex space-x-6">
-                {footerNavigation.social.map((item) => (
-                  <a key={item.name} href={item.href} className="text-warm-gray-400 hover:text-warm-gray-300">
-                    <span className="sr-only">{item.name}</span>
-                    <item.icon className="h-6 w-6" aria-hidden="true" />
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-base font-medium text-warm-gray-200">Solutions</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.solutions.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-warm-gray-400 hover:text-warm-gray-300">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-base font-medium text-warm-gray-200">Support</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.support.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-warm-gray-400 hover:text-warm-gray-300">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-base font-medium text-warm-gray-200">Company</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.company.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-warm-gray-400 hover:text-warm-gray-300">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-base font-medium text-warm-gray-200">Legal</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {footerNavigation.legal.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} className="text-base text-warm-gray-400 hover:text-warm-gray-300">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-warm-gray-700 pt-8">
-            <p className="text-base text-warm-gray-400 xl:text-center">
-              &copy; 2020 Your Company, Inc. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

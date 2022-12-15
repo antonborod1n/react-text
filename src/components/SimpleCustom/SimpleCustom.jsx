@@ -19,7 +19,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function SimpleCustom() {
+export function SimpleCustom() {
     const [selected, setSelected] = useState(people[3])
 
     return (

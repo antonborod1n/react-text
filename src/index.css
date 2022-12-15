@@ -17,3 +17,9 @@
 .top-text.p-6 {
     padding: 10.5rem !important;
 }
+
+.error-title {
+    width: 300px;
+    font-size: 40px;
+    margin: 0 auto;
+}

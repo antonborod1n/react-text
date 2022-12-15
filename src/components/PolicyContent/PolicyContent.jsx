@@ -1,18 +1,4 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/typography'),
-    ],
-  }
-  ```
-*/
-export default function Centered() {
+export function PolicyContent() {
     return (
         <div className="relative overflow-hidden bg-white py-16">
             <div className="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]">
@@ -87,7 +73,7 @@ export default function Centered() {
                     <h1>
                         <span className="block text-center text-lg font-semibold text-indigo-600">Introducing</span>
                         <span className="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-                            JavaScript for Beginners
+                            Beginners
                         </span>
                     </h1>
                     <p className="mt-8 text-xl leading-8 text-gray-500">
@@ -130,16 +116,16 @@ export default function Centered() {
                         Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
                         sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
                     </p>
-                    <figure>
+                    {/*  <figure>
                         <img
                             className="w-full rounded-lg"
                             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
                             alt=""
-                            width={1310}
-                            height={873}
+                            width={310}
+                            height={73}
                         />
                         <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>
-                    </figure>
+                    </figure> */}
                     <h2>Everything you need to get up and running</h2>
                     <p>
                         Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>. Amet, massa quam varius orci dapibus
